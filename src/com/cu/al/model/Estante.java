@@ -1,5 +1,10 @@
 package com.cu.al.model;
 
+/**
+ *
+ * @author Componentes Unidos
+ * @date 14/03/2023
+ */
 
 public class Estante {
     private int idEstante;
