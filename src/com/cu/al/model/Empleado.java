@@ -1,5 +1,11 @@
 package com.cu.al.model;
 
+/**
+ *
+ * @author Componentes Unidos
+ * @date 14/03/2023
+ */
+
 public class Empleado {
 
     private int idEmpleado;
