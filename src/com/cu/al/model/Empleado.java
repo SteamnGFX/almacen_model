@@ -17,13 +17,13 @@ public class Empleado {
     private String correo;
     private String genero;
     String numeroUnico;
-    private int telefonoFijo;
-    private int telefonoMovil;
+    private String telefonoFijo;
+    private String telefonoMovil;
 
     public Empleado() {
     }
 
-    public Empleado(Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, int telefonoFijo, int telefonoMovil) {
+    public Empleado(Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, String telefonoFijo, String telefonoMovil) {
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -36,7 +36,7 @@ public class Empleado {
         this.telefonoMovil = telefonoMovil;
     }
 
-    public Empleado(int idEmpleado, Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, int telefonoFijo, int telefonoMovil) {
+    public Empleado(int idEmpleado, Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, String telefonoFijo, String telefonoMovil) {
         this.idEmpleado = idEmpleado;
         this.usuario = usuario;
         this.nombre = nombre;
@@ -122,19 +122,19 @@ public class Empleado {
         this.numeroUnico = numeroUnico;
     }
 
-    public int getTelefonoFijo() {
+    public String getTelefonoFijo() {
         return telefonoFijo;
     }
 
-    public void setTelefonoFijo(int telefonoFijo) {
+    public void setTelefonoFijo(String telefonoFijo) {
         this.telefonoFijo = telefonoFijo;
     }
 
-    public int getTelefonoMovil() {
+    public String getTelefonoMovil() {
         return telefonoMovil;
     }
 
-    public void setTelefonoMovil(int telefonoMovil) {
+    public void setTelefonoMovil(String telefonoMovil) {
         this.telefonoMovil = telefonoMovil;
     }
 
