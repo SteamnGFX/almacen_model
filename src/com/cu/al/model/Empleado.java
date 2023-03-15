@@ -16,13 +16,14 @@ public class Empleado {
     private String rfc;
     private String correo;
     private String genero;
+    String numeroUnico;
     private int telefonoFijo;
     private int telefonoMovil;
 
     public Empleado() {
     }
 
-    public Empleado(Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, int telefonoFijo, int telefonoMovil) {
+    public Empleado(Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, int telefonoFijo, int telefonoMovil) {
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -30,11 +31,12 @@ public class Empleado {
         this.rfc = rfc;
         this.correo = correo;
         this.genero = genero;
+        this.numeroUnico = numeroUnico;
         this.telefonoFijo = telefonoFijo;
         this.telefonoMovil = telefonoMovil;
     }
 
-    public Empleado(int idEmpleado, Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, int telefonoFijo, int telefonoMovil) {
+    public Empleado(int idEmpleado, Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, int telefonoFijo, int telefonoMovil) {
         this.idEmpleado = idEmpleado;
         this.usuario = usuario;
         this.nombre = nombre;
@@ -43,6 +45,7 @@ public class Empleado {
         this.rfc = rfc;
         this.correo = correo;
         this.genero = genero;
+        this.numeroUnico = numeroUnico;
         this.telefonoFijo = telefonoFijo;
         this.telefonoMovil = telefonoMovil;
     }
@@ -111,6 +114,14 @@ public class Empleado {
         this.genero = genero;
     }
 
+    public String getNumeroUnico() {
+        return numeroUnico;
+    }
+
+    public void setNumeroUnico(String numeroUnico) {
+        this.numeroUnico = numeroUnico;
+    }
+
     public int getTelefonoFijo() {
         return telefonoFijo;
     }
@@ -129,22 +140,7 @@ public class Empleado {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Empleado{");
-        sb.append("idEmpleado=").append(idEmpleado);
-        sb.append(", usuario=").append(usuario);
-        sb.append(", nombre=").append(nombre);
-        sb.append(", apellidoPaterno=").append(apellidoPaterno);
-        sb.append(", apellidoMaterno=").append(apellidoMaterno);
-        sb.append(", rfc=").append(rfc);
-        sb.append(", correo=").append(correo);
-        sb.append(", genero=").append(genero);
-        sb.append(", telefonoFijo=").append(telefonoFijo);
-        sb.append(", telefonoMovil=").append(telefonoMovil);
-        sb.append('}');
-        return sb.toString();
+        return "Empleado{" + "idEmpleado=" + idEmpleado + ", usuario=" + usuario + ", nombre=" + nombre + ", apellidoPaterno=" + apellidoPaterno + ", apellidoMaterno=" + apellidoMaterno + ", rfc=" + rfc + ", correo=" + correo + ", genero=" + genero + ", numeroUnico=" + numeroUnico + ", telefonoFijo=" + telefonoFijo + ", telefonoMovil=" + telefonoMovil + '}';
     }
-    
-    
 
 }
