@@ -9,7 +9,7 @@ package com.cu.al.model;
 public class Usuario {
     
     private int idUsuario;
-    private String Usuario;
+    private String usuario;
     private String contrasenia;
     private String token;
     private String rol;
@@ -18,7 +18,7 @@ public class Usuario {
     }
 
     public Usuario(String Usuario, String contrasenia, String token, String rol) {
-        this.Usuario = Usuario;
+        this.usuario = Usuario;
         this.contrasenia = contrasenia;
         this.token = token;
         this.rol = rol;
@@ -26,7 +26,7 @@ public class Usuario {
 
     public Usuario(int idUsuario, String Usuario, String contrasenia, String token, String rol) {
         this.idUsuario = idUsuario;
-        this.Usuario = Usuario;
+        this.usuario = Usuario;
         this.contrasenia = contrasenia;
         this.token = token;
         this.rol = rol;
@@ -41,11 +41,11 @@ public class Usuario {
     }
 
     public String getUsuario() {
-        return Usuario;
+        return usuario;
     }
 
     public void setUsuario(String Usuario) {
-        this.Usuario = Usuario;
+        this.usuario = Usuario;
     }
 
     public String getContrasenia() {
@@ -77,7 +77,7 @@ public class Usuario {
         StringBuilder sb = new StringBuilder();
         sb.append("Usuario{");
         sb.append("idUsuario=").append(idUsuario);
-        sb.append(", Usuario=").append(Usuario);
+        sb.append(", Usuario=").append(usuario);
         sb.append(", contrasenia=").append(contrasenia);
         sb.append(", token=").append(token);
         sb.append(", rol=").append(rol);
