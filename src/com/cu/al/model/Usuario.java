@@ -14,24 +14,6 @@ public class Usuario {
     private String token;
     private String rol;
 
-    public Usuario() {
-    }
-
-    public Usuario(String Usuario, String contrasenia, String token, String rol) {
-        this.usuario = Usuario;
-        this.contrasenia = contrasenia;
-        this.token = token;
-        this.rol = rol;
-    }
-
-    public Usuario(int idUsuario, String Usuario, String contrasenia, String token, String rol) {
-        this.idUsuario = idUsuario;
-        this.usuario = Usuario;
-        this.contrasenia = contrasenia;
-        this.token = token;
-        this.rol = rol;
-    }
-
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -44,8 +26,8 @@ public class Usuario {
         return usuario;
     }
 
-    public void setUsuario(String Usuario) {
-        this.usuario = Usuario;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getContrasenia() {
@@ -77,13 +59,13 @@ public class Usuario {
         StringBuilder sb = new StringBuilder();
         sb.append("Usuario{");
         sb.append("idUsuario=").append(idUsuario);
-        sb.append(", Usuario=").append(usuario);
+        sb.append(", usuario=").append(usuario);
         sb.append(", contrasenia=").append(contrasenia);
         sb.append(", token=").append(token);
         sb.append(", rol=").append(rol);
         sb.append('}');
         return sb.toString();
     }
-    
+
     
 }
