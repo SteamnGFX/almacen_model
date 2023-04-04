@@ -151,6 +151,23 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado{" + "idEmpleado=" + idEmpleado + ", usuario=" + usuario + ", nombre=" + nombre + ", apellidoPaterno=" + apellidoPaterno + ", apellidoMaterno=" + apellidoMaterno + ", rfc=" + rfc + ", correo=" + correo + ", genero=" + genero + ", numeroUnico=" + numeroUnico + ", telefonoFijo=" + telefonoFijo + ", telefonoMovil=" + telefonoMovil + ", estatus=" + estatus + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empleado{");
+        sb.append("idEmpleado=").append(idEmpleado);
+        sb.append(", usuario=").append(usuario);
+        sb.append(", nombre=").append(nombre);
+        sb.append(", apellidoPaterno=").append(apellidoPaterno);
+        sb.append(", apellidoMaterno=").append(apellidoMaterno);
+        sb.append(", rfc=").append(rfc);
+        sb.append(", correo=").append(correo);
+        sb.append(", genero=").append(genero);
+        sb.append(", numeroUnico=").append(numeroUnico);
+        sb.append(", telefonoFijo=").append(telefonoFijo);
+        sb.append(", telefonoMovil=").append(telefonoMovil);
+        sb.append(", estatus=").append(estatus);
+        sb.append('}');
+        return sb.toString();
     }
+
+   
 }

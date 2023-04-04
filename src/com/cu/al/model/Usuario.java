@@ -14,6 +14,26 @@ public class Usuario {
     private String token;
     private String rol;
 
+    public Usuario(int idUsuario, String usuario, String contrasenia, String token, String rol) {
+        this.idUsuario = idUsuario;
+        this.usuario = usuario;
+        this.contrasenia = contrasenia;
+        this.token = token;
+        this.rol = rol;
+    }
+
+    public Usuario() {
+    }
+
+    public Usuario(String usuario, String contrasenia, String token, String rol) {
+        this.usuario = usuario;
+        this.contrasenia = contrasenia;
+        this.token = token;
+        this.rol = rol;
+    }
+    
+    
+
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -67,5 +87,5 @@ public class Usuario {
         return sb.toString();
     }
 
-    
+        
 }
