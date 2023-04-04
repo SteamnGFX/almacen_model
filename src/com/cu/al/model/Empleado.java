@@ -19,11 +19,12 @@ public class Empleado {
     String numeroUnico;
     private String telefonoFijo;
     private String telefonoMovil;
+    private String estatus;
 
     public Empleado() {
     }
 
-    public Empleado(Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, String telefonoFijo, String telefonoMovil) {
+    public Empleado(Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, String telefonoFijo, String telefonoMovil, String estatus) {
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -34,9 +35,10 @@ public class Empleado {
         this.numeroUnico = numeroUnico;
         this.telefonoFijo = telefonoFijo;
         this.telefonoMovil = telefonoMovil;
+        this.estatus = estatus;
     }
 
-    public Empleado(int idEmpleado, Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, String telefonoFijo, String telefonoMovil) {
+    public Empleado(int idEmpleado, Usuario usuario, String nombre, String apellidoPaterno, String apellidoMaterno, String rfc, String correo, String genero, String numeroUnico, String telefonoFijo, String telefonoMovil, String estatus) {
         this.idEmpleado = idEmpleado;
         this.usuario = usuario;
         this.nombre = nombre;
@@ -48,6 +50,7 @@ public class Empleado {
         this.numeroUnico = numeroUnico;
         this.telefonoFijo = telefonoFijo;
         this.telefonoMovil = telefonoMovil;
+        this.estatus = estatus;
     }
 
     public int getIdEmpleado() {
@@ -138,9 +141,33 @@ public class Empleado {
         this.telefonoMovil = telefonoMovil;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado{" + "idEmpleado=" + idEmpleado + ", usuario=" + usuario + ", nombre=" + nombre + ", apellidoPaterno=" + apellidoPaterno + ", apellidoMaterno=" + apellidoMaterno + ", rfc=" + rfc + ", correo=" + correo + ", genero=" + genero + ", numeroUnico=" + numeroUnico + ", telefonoFijo=" + telefonoFijo + ", telefonoMovil=" + telefonoMovil + '}';
+    public String getEstatus() {
+        return estatus;
     }
 
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empleado{");
+        sb.append("idEmpleado=").append(idEmpleado);
+        sb.append(", usuario=").append(usuario);
+        sb.append(", nombre=").append(nombre);
+        sb.append(", apellidoPaterno=").append(apellidoPaterno);
+        sb.append(", apellidoMaterno=").append(apellidoMaterno);
+        sb.append(", rfc=").append(rfc);
+        sb.append(", correo=").append(correo);
+        sb.append(", genero=").append(genero);
+        sb.append(", numeroUnico=").append(numeroUnico);
+        sb.append(", telefonoFijo=").append(telefonoFijo);
+        sb.append(", telefonoMovil=").append(telefonoMovil);
+        sb.append(", estatus=").append(estatus);
+        sb.append('}');
+        return sb.toString();
+    }
+
+   
 }

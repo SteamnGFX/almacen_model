@@ -9,28 +9,30 @@ package com.cu.al.model;
 public class Usuario {
     
     private int idUsuario;
-    private String Usuario;
+    private String usuario;
     private String contrasenia;
     private String token;
     private String rol;
 
+    public Usuario(int idUsuario, String usuario, String contrasenia, String token, String rol) {
+        this.idUsuario = idUsuario;
+        this.usuario = usuario;
+        this.contrasenia = contrasenia;
+        this.token = token;
+        this.rol = rol;
+    }
+
     public Usuario() {
     }
 
-    public Usuario(String Usuario, String contrasenia, String token, String rol) {
-        this.Usuario = Usuario;
+    public Usuario(String usuario, String contrasenia, String token, String rol) {
+        this.usuario = usuario;
         this.contrasenia = contrasenia;
         this.token = token;
         this.rol = rol;
     }
-
-    public Usuario(int idUsuario, String Usuario, String contrasenia, String token, String rol) {
-        this.idUsuario = idUsuario;
-        this.Usuario = Usuario;
-        this.contrasenia = contrasenia;
-        this.token = token;
-        this.rol = rol;
-    }
+    
+    
 
     public int getIdUsuario() {
         return idUsuario;
@@ -41,11 +43,11 @@ public class Usuario {
     }
 
     public String getUsuario() {
-        return Usuario;
+        return usuario;
     }
 
-    public void setUsuario(String Usuario) {
-        this.Usuario = Usuario;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getContrasenia() {
@@ -77,13 +79,13 @@ public class Usuario {
         StringBuilder sb = new StringBuilder();
         sb.append("Usuario{");
         sb.append("idUsuario=").append(idUsuario);
-        sb.append(", Usuario=").append(Usuario);
+        sb.append(", usuario=").append(usuario);
         sb.append(", contrasenia=").append(contrasenia);
         sb.append(", token=").append(token);
         sb.append(", rol=").append(rol);
         sb.append('}');
         return sb.toString();
     }
-    
-    
+
+        
 }

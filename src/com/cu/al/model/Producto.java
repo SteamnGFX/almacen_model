@@ -1,52 +1,41 @@
 package com.cu.al.model;
 
-/**
- *
- * @author Componentes Unidos
- * @date 14/03/2023
- */
-
 public class Producto {
-    
+
     private int idProducto;
     private String nombre;
+    private String tipo;
     private String marca;
     private String descripcion;
-    private String existencias;
+    private int existencias;
     private String proveedor;
     private String fechaEntrada;
-    private String estante;
+    private int estatus;
 
     public Producto() {
     }
 
-    public Producto(String nombre, String marca, String descripcion, String existencias, String proveedor, String fechaEntrada, String estante) {
+    public Producto(String nombre, String tipo, String marca, String descripcion, int existencias, String proveedor, String fechaEntrada, int estatus) {
         this.nombre = nombre;
+        this.tipo = tipo;
         this.marca = marca;
         this.descripcion = descripcion;
         this.existencias = existencias;
         this.proveedor = proveedor;
         this.fechaEntrada = fechaEntrada;
-        this.estante = estante;
+        this.estatus = estatus;
     }
 
-    public Producto(int idProducto, String nombre, String marca, String descripcion, String existencias, String proveedor, String fechaEntrada, String estante) {
+    public Producto(int idProducto, String nombre, String tipo, String marca, String descripcion, int existencias, String proveedor, String fechaEntrada, int estatus) {
         this.idProducto = idProducto;
         this.nombre = nombre;
+        this.tipo = tipo;
         this.marca = marca;
         this.descripcion = descripcion;
         this.existencias = existencias;
         this.proveedor = proveedor;
         this.fechaEntrada = fechaEntrada;
-        this.estante = estante;
-    }
-
-    public String getEstante() {
-        return estante;
-    }
-
-    public void setEstante(String estante) {
-        this.estante = estante;
+        this.estatus = estatus;
     }
 
     public int getIdProducto() {
@@ -65,6 +54,14 @@ public class Producto {
         this.nombre = nombre;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     public String getMarca() {
         return marca;
     }
@@ -81,11 +78,11 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public String getExistencias() {
+    public int getExistencias() {
         return existencias;
     }
 
-    public void setExistencias(String existencias) {
+    public void setExistencias(int existencias) {
         this.existencias = existencias;
     }
 
@@ -105,23 +102,29 @@ public class Producto {
         this.fechaEntrada = fechaEntrada;
     }
 
+    public int getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(int estatus) {
+        this.estatus = estatus;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Producto{");
         sb.append("idProducto=").append(idProducto);
         sb.append(", nombre=").append(nombre);
+        sb.append(", tipo=").append(tipo);
         sb.append(", marca=").append(marca);
         sb.append(", descripcion=").append(descripcion);
         sb.append(", existencias=").append(existencias);
         sb.append(", proveedor=").append(proveedor);
         sb.append(", fechaEntrada=").append(fechaEntrada);
-        sb.append(", estante=").append(estante);
+        sb.append(", estatus=").append(estatus);
         sb.append('}');
         return sb.toString();
     }
-    
-    
-    
-    
+
 }
